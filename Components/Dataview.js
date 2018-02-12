@@ -2,6 +2,8 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 
+import TimeFormats from "../util/TimeFormats"; 
+
 export class Dataview extends React.Component {
   componentDidMount() {
     this.props.getData();
@@ -18,7 +20,7 @@ export class Dataview extends React.Component {
         {this.props.datapoints.map(datapoint => {
           return (
             <Text key={datapoint.timestamp} style={styles.textItem}>
-              {datapoint.moisture} - {datapoint.timestamp}
+              {datapoint.moisture} - {TimeFormats.getTime(datapoint.timestamp).all}
             </Text>
           );
         })}
@@ -28,8 +30,9 @@ export class Dataview extends React.Component {
 }
 const styles = StyleSheet.create({
   textItem: {
-    fontSize: 15,
-    textAlign: "center",
-    margin: 20
+    marginTop: 20,
+    color: "#ffff",
+    fontSize: 20,
+    alignSelf: "center"
   }
 });
