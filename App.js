@@ -5,6 +5,7 @@ import { ScrollView } from "react-native-gesture-handler";
 //importing my components 
 import { Header } from './Components/Header'; 
 import { Dataview } from './Components/Dataview'; 
+import { CurrentData } from './Components/CurrentData';
 
 export default class App extends React.Component {
   componentWillMount(){
@@ -28,18 +29,25 @@ export default class App extends React.Component {
     })
   }
   render() {
-    return <ScrollView style={styles.mainView}>
+    return ( 
+      <ScrollView style={styles.mainView}>
+        <CurrentData          
+          currentDatapoint={this.state.datapoints[0]}
+        >
+        </CurrentData>
         <Dataview 
-          style={styles.dataView}
           datapoints={this.state.datapoints} 
           getData={this.getData.bind(this)} 
-        />
-      </ScrollView>;
+        ></Dataview>
+      </ScrollView>
+    ); 
   }
 }
 
 const styles = StyleSheet.create({
-  dataView: {
-    color: "#f0f"
+  mainView: {
+    width: "10%",
+    alignSelf: "center",
+    marginTop: 500
   }
 });

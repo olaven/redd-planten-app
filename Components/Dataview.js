@@ -13,12 +13,11 @@ export class Dataview extends React.Component {
   _keyExtractor(item, index) {}
 
   render() {
-    console.log(this.props.datapoints);
     return (
       <View>
         {this.props.datapoints.map(datapoint => {
           return (
-            <Text key={datapoint.timestamp}>
+            <Text key={datapoint.timestamp} style={styles.textItem}>
               {datapoint.moisture} - {datapoint.timestamp}
             </Text>
           );
@@ -27,3 +26,10 @@ export class Dataview extends React.Component {
     );
   }
 }
+const styles = StyleSheet.create({
+  textItem: {
+    fontSize: 15,
+    textAlign: "center",
+    margin: 20
+  }
+});
