@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, RefreshControl } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
 //importing my components
@@ -8,16 +8,19 @@ import { Dataview } from "./Components/Dataview";
 import { CurrentData } from "./Components/CurrentData";
 
 export default class App extends React.Component {
-  componentWillMount() {
-    this.setState({
-      datapoints: []
-    });
+  constructor(){
+    super(); 
+    this.state = {
+      datapoints : [], 
+      refreshing : false
+    }
   }
   //getting data from data stream -> passed to Dataview
   getData() {
     fetch(
       "http://phant.labben.org:8090/output/pjKMyaJ9adU9XKYolNoKfYeZz8L.json"
     ).done(response => {
+      this.state.refreshing = false; 
       this.handleData(response);
     });
   }
@@ -29,26 +32,39 @@ export default class App extends React.Component {
     });
   }
   render() {
-    return <View>
+    return (
+      <View style={styles.mainContainer}>
         <View style={styles.currentDatapointView}>
           <CurrentData currentDatapoint={this.state.datapoints[0]} />
         </View>
-        <ScrollView style={styles.allDatapontsView}>
+        <ScrollView 
+          style={styles.allDatapontsView}
+          refreshControl={
+            <RefreshControl
+              refreshing={this.state.refreshing}
+              onRefresh={this.getData.bind(this)}
+            />
+          }
+        >
           <Dataview datapoints={this.state.datapoints} getData={this.getData.bind(this)} />
         </ScrollView>
-      </View>;
+      </View>
+    ); 
   }
 }
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    flexDirection: "row"
+  },
   currentDatapointView: {
     backgroundColor: "#f22f",
-    height: 500
+    flex: 1
   },
   allDatapontsView: {
     width: "100%",
     alignSelf: "center",
-    height: 500,
+    flex: 1,
     backgroundColor: "#aaaa"
   }
 });
