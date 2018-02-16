@@ -3,7 +3,7 @@ Made for my girlfriend, to help her remember to water a plant in her room. Based
 
 ## Todo 💻 ☕️
 - [x] Sketch out GUI 
-- [ ] Refactor/Remake whole thing -> ugly and messy code atm
+- [X] Refactor/Remake whole thing -> ugly and messy code atm
 - [ ] Enable alerts when getting dry 
 - [ ] Color changing based on plant status
 
