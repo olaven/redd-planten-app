@@ -2,7 +2,7 @@
 Made for my girlfriend, to help her remember to water a plant in her room. Based on an arduino project built at the "Redd Plantene Med Programmering"-event (https://github.com/9khil/reddplantene)
 
 ## Todo 💻 ☕️
-- [ ] Sketch out GUI 
+- [x] Sketch out GUI 
 - [ ] Refactor/Remake whole thing -> ugly and messy code atm
 - [ ] Enable alerts when getting dry 
 - [ ] Color changing based on plant status

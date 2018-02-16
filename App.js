@@ -1,70 +1,64 @@
-import React from "react";
-import { StyleSheet, Text, View, RefreshControl } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import React, { Component } from "react";
+import { Platform, StyleSheet, AppRegistry, Text, View } from "react-native";
 
 //importing my components
-import { Header } from "./Components/Header";
-import { Dataview } from "./Components/Dataview";
-import { CurrentData } from "./Components/CurrentData";
+import CurrentStatus from "./Components/CurrentStatus";
+import HistoryView from "./Components/HistoryView";
 
-export default class App extends React.Component {
-  constructor(){
-    super(); 
-    this.state = {
-      datapoints : [], 
-      refreshing : false
-    }
+export default class App extends Component {
+
+  componentWillMount() {
+    this.setState({
+      datapoints: [
+        {
+          timestamp: "0000-00-00T00:00:00.000Z",
+          moisture: 0
+        }
+      ], 
+      refreshing: false 
+    }); 
+    this.refreshData(); //refresh on startup
   }
-  //getting data from data stream -> passed to Dataview
-  getData() {
-    fetch(
-      "http://phant.labben.org:8090/output/pjKMyaJ9adU9XKYolNoKfYeZz8L.json"
-    ).done(response => {
-      this.state.refreshing = false; 
-      this.handleData(response);
-    });
+
+  refreshData() {
+    this.setState({refreshing: true})
+    fetch("http://phant.labben.org:8090/output/pjKMyaJ9adU9XKYolNoKfYeZz8L.json").done(
+      response => {
+        this.handleFetchedData(response);
+      }
+    ); 
   }
-  handleData(response) {
+  handleFetchedData(response) {
+    this.setState({refreshing:false})
     //JSON string from the response to js object
     let result = JSON.parse(JSON.parse(JSON.stringify(response._bodyText)));
     this.setState({
-      datapoints: result
-    });
+      datapoints : result
+    }); 
   }
+
   render() {
-    return (
-      <View style={styles.mainContainer}>
-        <View style={styles.currentDatapointView}>
-          <CurrentData currentDatapoint={this.state.datapoints[0]} />
-        </View>
-        <ScrollView 
-          style={styles.allDatapontsView}
-          refreshControl={
-            <RefreshControl
-              refreshing={this.state.refreshing}
-              onRefresh={this.getData.bind(this)}
-            />
-          }
-        >
-          <Dataview datapoints={this.state.datapoints} getData={this.getData.bind(this)} />
-        </ScrollView>
-      </View>
-    ); 
+    return <View style={styles.container}>
+        <CurrentStatus inheritedStyles={styles.currentStatus} datapoints={this.state.datapoints}/>
+        <HistoryView 
+          inheritedStyles={styles.historyView} 
+          datapoints={this.state.datapoints} 
+          refreshData={this.refreshData.bind(this)}
+          refreshing={this.state.refreshing}/>
+      </View>;
   }
 }
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    flexDirection: "row"
-  },
-  currentDatapointView: {
-    backgroundColor: "#f22f",
+  container: {
     flex: 1
   },
-  allDatapontsView: {
-    width: "100%",
-    alignSelf: "center",
-    flex: 1,
-    backgroundColor: "#aaaa"
+  currentStatus: {
+    flex: 3,
+    backgroundColor: "rosybrown"
+  },
+  historyView: {
+    flex: 2,
+    backgroundColor: "steelblue"
   }
 });
