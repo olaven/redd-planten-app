@@ -5,21 +5,34 @@ import { Platform, StyleSheet, AppRegistry, Text, View } from "react-native";
 import CurrentStatus from "./Components/CurrentStatus";
 import HistoryView from "./Components/HistoryView";
 
-export default class App extends Component<Props> {
+export default class App extends Component {
 
-  constructor() {
-    super(); 
+  componentWillMount() {
+    this.setState({
+      datapoints: [
+        {
+          timestamp : "inittime", 
+          moisture : 0 
+        } 
+      ]
+    }); 
+        setInterval(() => {
+          console.log(this.state.datapoints);
+        }, 1000);
+
     this.refreshData(); //refresh on startup
   }
 
   refreshData() {
-    /* FIND A FIX
-    fetch("http://phant.labben.org:8090/output/pjKMyaJ9adU9XKYolNoKfYeZz8L.json"
-    ).then(response => {
-      this.state.refreshing = false;
-      handleFetchedData();
-    }).catch((error) => {console.error(error)}); 
-    */
+    fetch("http://phant.labben.org:8090/output/pjKMyaJ9adU9XKYolNoKfYeZz8L.json")
+        .then(response => {
+          if(response.status === "OK"){
+            this.handleFetchedData(response);
+          }
+        })
+        .catch(error => {
+          console.log(error.message); 
+        }); 
   }
   handleFetchedData(response) {
     //JSON string from the response to js object
@@ -30,12 +43,10 @@ export default class App extends Component<Props> {
   }
 
   render() {
-    return (
-      <View style={styles.container}>
+    return <View style={styles.container}>
         <CurrentStatus inheritedStyles={styles.currentStatus} />
-        <HistoryView inheritedStyles={styles.historyView} />
-      </View>
-    );
+        <HistoryView inheritedStyles={styles.historyView} datapoints={this.state.datapoints} />
+      </View>;
   }
 }
 

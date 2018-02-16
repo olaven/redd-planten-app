@@ -3,8 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>LastAccessedDate</key>
-	<date>2018-02-13T23:00:39Z</date>
+	<date>2018-02-16T19:21:20Z</date>
 	<key>WorkspacePath</key>
 	<string>/Users/olav/Documents/prosjekter/github/redd-planten-app/ios/reddplantene.xcodeproj</string>
+</dict>
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
 </dict>
 </plist>
