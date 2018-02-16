@@ -14,12 +14,14 @@ export default class App extends Component {
           timestamp: "0000-00-00T00:00:00.000Z",
           moisture: 0
         }
-      ]
+      ], 
+      refreshing: false 
     }); 
     this.refreshData(); //refresh on startup
   }
 
   refreshData() {
+    this.setState({refreshing: true})
     fetch("http://phant.labben.org:8090/output/pjKMyaJ9adU9XKYolNoKfYeZz8L.json").done(
       response => {
         this.handleFetchedData(response);
@@ -27,6 +29,7 @@ export default class App extends Component {
     ); 
   }
   handleFetchedData(response) {
+    this.setState({refreshing:false})
     //JSON string from the response to js object
     let result = JSON.parse(JSON.parse(JSON.stringify(response._bodyText)));
     this.setState({
@@ -37,7 +40,11 @@ export default class App extends Component {
   render() {
     return <View style={styles.container}>
         <CurrentStatus inheritedStyles={styles.currentStatus} datapoints={this.state.datapoints}/>
-        <HistoryView inheritedStyles={styles.historyView} datapoints={this.state.datapoints} />
+        <HistoryView 
+          inheritedStyles={styles.historyView} 
+          datapoints={this.state.datapoints} 
+          refreshData={this.refreshData.bind(this)}
+          refreshing={this.state.refreshing}/>
       </View>;
   }
 }

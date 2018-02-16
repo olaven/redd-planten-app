@@ -5,7 +5,8 @@ import {
   Text,
   View,
   ScrollView,
-  FlatList
+  FlatList, 
+  RefreshControl
 } from "react-native";
 //my own package
 import TimeFormats from "../TimeFormats.js";
@@ -36,12 +37,19 @@ export default class HistoryView extends Component {
   }
 
   render() {
-    return (
-      <View style={this.props.inheritedStyles}>
+    return <View style={this.props.inheritedStyles}>
         <Text style={styles.header}>HISTORY</Text>
-        <ScrollView>{this.displayDataPoints(this.props.datapoints)}</ScrollView>
-      </View>
-    );
+        <ScrollView
+          refreshControl={
+            <RefreshControl
+              refreshing={this.props.refreshing}
+              onRefresh={this.props.refreshData}
+            />
+          }
+        >
+          {this.displayDataPoints(this.props.datapoints)}
+        </ScrollView>
+      </View>;
   }
 }
 
