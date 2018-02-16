@@ -11,40 +11,32 @@ export default class App extends Component {
     this.setState({
       datapoints: [
         {
-          timestamp : "inittime", 
-          moisture : 0 
-        } 
+          timestamp: "0000-00-00T00:00:00.000Z",
+          moisture: 0
+        }
       ]
     }); 
-        setInterval(() => {
-          console.log(this.state.datapoints);
-        }, 1000);
-
     this.refreshData(); //refresh on startup
   }
 
   refreshData() {
-    fetch("http://phant.labben.org:8090/output/pjKMyaJ9adU9XKYolNoKfYeZz8L.json")
-        .then(response => {
-          if(response.status === "OK"){
-            this.handleFetchedData(response);
-          }
-        })
-        .catch(error => {
-          console.log(error.message); 
-        }); 
+    fetch("http://phant.labben.org:8090/output/pjKMyaJ9adU9XKYolNoKfYeZz8L.json").done(
+      response => {
+        this.handleFetchedData(response);
+      }
+    ); 
   }
   handleFetchedData(response) {
     //JSON string from the response to js object
     let result = JSON.parse(JSON.parse(JSON.stringify(response._bodyText)));
     this.setState({
       datapoints : result
-    })
+    }); 
   }
 
   render() {
     return <View style={styles.container}>
-        <CurrentStatus inheritedStyles={styles.currentStatus} />
+        <CurrentStatus inheritedStyles={styles.currentStatus} datapoints={this.state.datapoints}/>
         <HistoryView inheritedStyles={styles.historyView} datapoints={this.state.datapoints} />
       </View>;
   }

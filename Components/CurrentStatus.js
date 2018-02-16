@@ -5,19 +5,18 @@ export default class CurrentStatus extends Component {
   render() {
     return (
       <View style={this.props.inheritedStyles}>
-        <Text style={styles.text}>CURRENTSTATUS</Text>
+        <Text style={styles.text}>Nå: {this.props.datapoints[0].moisture}</Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-    text : {
-        backgroundColor: "#fade",
-        marginTop: 300, 
-        padding: 20,
-        borderStyle: "solid",
-        alignSelf: "center", 
-        fontSize: 35
-    }
-})
+  text: {
+    backgroundColor: "khaki",
+    marginTop: 300,
+    padding: 20,
+    alignSelf: "center",
+    fontSize: 35
+  }
+});
