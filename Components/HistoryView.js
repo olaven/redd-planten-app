@@ -13,25 +13,32 @@ import TimeFormats from "../TimeFormats.js";
 export default class HistoryView extends Component {
   displayDataPoints(datapoints) {
     return datapoints.map(datapoint => {
-      console.log(datapoint.timestamp)
-      return <Text key={datapoint.timestamp} style={styles.datapoints}>
-          {datapoint.moisture} - {this.formatTimestampForHistoryView(datapoint.timestamp)}
-        </Text>;
+      return (
+        <Text key={datapoint.timestamp} style={styles.datapoints}>
+          {datapoint.moisture} -{" "}
+          {this.formatTimestampForHistoryView(datapoint.timestamp)}
+        </Text>
+      );
     });
   }
 
-  formatTimestampForHistoryView(timestamp){
-    let timePart = TimeFormats.getTime(timestamp).hour + ":" + TimeFormats.getTime(timestamp).minute; 
-    let datePart = TimeFormats.getDate(timestamp).day + "." + TimeFormats.getDate(timestamp).month; 
-    
-    return datePart + " " + timePart; 
+  formatTimestampForHistoryView(timestamp) {
+    let prettyTime =
+      TimeFormats.getTime(timestamp).hour +
+      ":" +
+      TimeFormats.getTime(timestamp).minute;
+    let prettyDate =
+      TimeFormats.getDate(timestamp).day +
+      "." +
+      TimeFormats.getDate(timestamp).month;
+
+    return prettyDate + " " + prettyTime;
   }
 
   render() {
     return (
       <View style={this.props.inheritedStyles}>
         <Text style={styles.header}>HISTORY</Text>
-
         <ScrollView>{this.displayDataPoints(this.props.datapoints)}</ScrollView>
       </View>
     );
