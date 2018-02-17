@@ -3,10 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>FAKETEAMID.org.reactjs.native.example.reddplantene</string>
-	<key>keychain-access-groups</key>
-	<array>
-		<string>FAKETEAMID.org.reactjs.native.example.reddplantene</string>
-	</array>
+	<string>NF2B2947KN.org.reactjs.native.example.reddplantene</string>
+	<key>aps-environment</key>
+	<string>development</string>
 </dict>
 </plist>
