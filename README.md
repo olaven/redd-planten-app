@@ -15,4 +15,4 @@ Made for my girlfriend, to help her remember to water a plant in her room. Based
 iOS is the platform I have in mind. As of now, building for android _should_ work as well ☎️
 
 ## Current (unfinished) look
-![Image of GUI](https://i.imgur.com/Xe9SPMG.png)
+![Image of GUI](https://i.imgur.com/c458NS1.png)
