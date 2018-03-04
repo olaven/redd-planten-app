@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, AppRegistry, Text, View } from "react-native";
+import {StyleSheet, View, PushNotificationIOS} from "react-native";
 
 //importing my components
 import CurrentStatus from "./Components/CurrentStatus";
@@ -38,6 +38,8 @@ export default class App extends Component {
   }
 
   render() {
+    //MÅ TESTE MED ET DEVICE!
+    PushNotificationIOS.presentLocalNotification({message: "hei"}); 
     return <View style={styles.container}>
         <CurrentStatus inheritedStyles={styles.currentStatus} datapoints={this.state.datapoints}/>
         <HistoryView 
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rosybrown"
   },
   historyView: {
-    flex: 2,
+    flex: 4,
     backgroundColor: "steelblue"
   }
 });

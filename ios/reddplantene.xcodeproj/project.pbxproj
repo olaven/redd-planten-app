@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -36,8 +35,23 @@
 		2DCD954D1E0B4F2C00145EB5 /* reddplanteneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reddplanteneTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		BFBF9DAC2044249C000AC6B3 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBF9D9020442379000AC6B3 /* libRCTPushNotification.a */; };
 		BFF44E602037A8FB00A0DCC6 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF44E612037A8FB00A0DCC6 /* libRCTPushNotification.a */; };
 		BFF44E872037ACAF00A0DCC6 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		1B988A3626BE4A5C910072A4 /* Arimo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9833560AFE4C4F868C301AEF /* Arimo-Bold.ttf */; };
+		E269EEE3B3EC454F94920821 /* Arimo-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 833EBAD641AD456E88A77CF2 /* Arimo-BoldItalic.ttf */; };
+		55FD11CEA9BA4F158D1A85A1 /* Arimo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 516E9D32F20E4C3C90E3F65B /* Arimo-Italic.ttf */; };
+		5892F6D649F54027BA4B5A70 /* Arimo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5365698E88A49C7B1CA3DCC /* Arimo-Regular.ttf */; };
+		4BE90142CD7546D499327EE8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 623B6C62547741D08E6F7D08 /* OpenSans-Bold.ttf */; };
+		E5A0C64570D94FAEA4C74588 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2A1EEA82B874735ABA99CC4 /* OpenSans-BoldItalic.ttf */; };
+		ACE540B2B5B04026AB5758F7 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0D2477E5ABD4B388C762B69 /* OpenSans-ExtraBold.ttf */; };
+		1B07535FB07A452C92F1ABF8 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAFC549B10BB4B18848ADBA6 /* OpenSans-ExtraBoldItalic.ttf */; };
+		BC4CEC32C989432AAEE8F0DC /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96E0407894CF410B9EF0E562 /* OpenSans-Italic.ttf */; };
+		F66DD19B0D104D68B5BA0D25 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7D587BFAC1849E2A1992F86 /* OpenSans-Light.ttf */; };
+		F1B23CD595B3422FA54E0D87 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C851B151940B4667960EEB5F /* OpenSans-LightItalic.ttf */; };
+		3F94B8B08E294670A59DC9FD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E68AD50E6014B73BBD1F4E8 /* OpenSans-Regular.ttf */; };
+		C6003027613D46B5A0DC8E80 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5CB3B8D33444E52B8F07765 /* OpenSans-SemiBold.ttf */; };
+		E20B4520AC124998A5A4A635 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 435F9A891AD746798EDC3004 /* OpenSans-SemiBoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -314,6 +328,20 @@
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
 		};
+		BFBF9D8F20442379000AC6B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFBF9D7E20442379000AC6B3 /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTPushNotification;
+		};
+		BFBF9D9120442379000AC6B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFBF9D7E20442379000AC6B3 /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D05745F1DE6004600184BB4;
+			remoteInfo = "RCTPushNotification-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -344,7 +372,22 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		BF4DCADE2037A6ED00698BC7 /* reddplantene.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = reddplantene.entitlements; path = reddplantene/reddplantene.entitlements; sourceTree = "<group>"; };
+		BFBF9D7E20442379000AC6B3 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
 		BFF44E612037A8FB00A0DCC6 /* libRCTPushNotification.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRCTPushNotification.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9833560AFE4C4F868C301AEF /* Arimo-Bold.ttf */ = {isa = PBXFileReference; name = "Arimo-Bold.ttf"; path = "../assets/fonts/Arimo/Arimo-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		833EBAD641AD456E88A77CF2 /* Arimo-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Arimo-BoldItalic.ttf"; path = "../assets/fonts/Arimo/Arimo-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		516E9D32F20E4C3C90E3F65B /* Arimo-Italic.ttf */ = {isa = PBXFileReference; name = "Arimo-Italic.ttf"; path = "../assets/fonts/Arimo/Arimo-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E5365698E88A49C7B1CA3DCC /* Arimo-Regular.ttf */ = {isa = PBXFileReference; name = "Arimo-Regular.ttf"; path = "../assets/fonts/Arimo/Arimo-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		623B6C62547741D08E6F7D08 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; name = "OpenSans-Bold.ttf"; path = "../assets/fonts/Open_Sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C2A1EEA82B874735ABA99CC4 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-BoldItalic.ttf"; path = "../assets/fonts/Open_Sans/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D0D2477E5ABD4B388C762B69 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; name = "OpenSans-ExtraBold.ttf"; path = "../assets/fonts/Open_Sans/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AAFC549B10BB4B18848ADBA6 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../assets/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		96E0407894CF410B9EF0E562 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; name = "OpenSans-Italic.ttf"; path = "../assets/fonts/Open_Sans/OpenSans-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C7D587BFAC1849E2A1992F86 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; name = "OpenSans-Light.ttf"; path = "../assets/fonts/Open_Sans/OpenSans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C851B151940B4667960EEB5F /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-LightItalic.ttf"; path = "../assets/fonts/Open_Sans/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E68AD50E6014B73BBD1F4E8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/Open_Sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D5CB3B8D33444E52B8F07765 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "OpenSans-SemiBold.ttf"; path = "../assets/fonts/Open_Sans/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		435F9A891AD746798EDC3004 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-SemiBoldItalic.ttf"; path = "../assets/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +403,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBF9DAC2044249C000AC6B3 /* libRCTPushNotification.a in Frameworks */,
 				BFF44E872037ACAF00A0DCC6 /* libRCTText.a in Frameworks */,
 				BFF44E602037A8FB00A0DCC6 /* libRCTPushNotification.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
@@ -549,6 +593,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BFBF9D7E20442379000AC6B3 /* RCTPushNotification.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -582,6 +627,7 @@
 				00E356EF1AD99517003FC87E /* reddplanteneTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				B0575BCB017E4E4CA3849E82 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -607,6 +653,37 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		BFBF9D7F20442379000AC6B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFBF9D9020442379000AC6B3 /* libRCTPushNotification.a */,
+				BFBF9D9220442379000AC6B3 /* libRCTPushNotification-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0575BCB017E4E4CA3849E82 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				9833560AFE4C4F868C301AEF /* Arimo-Bold.ttf */,
+				833EBAD641AD456E88A77CF2 /* Arimo-BoldItalic.ttf */,
+				516E9D32F20E4C3C90E3F65B /* Arimo-Italic.ttf */,
+				E5365698E88A49C7B1CA3DCC /* Arimo-Regular.ttf */,
+				623B6C62547741D08E6F7D08 /* OpenSans-Bold.ttf */,
+				C2A1EEA82B874735ABA99CC4 /* OpenSans-BoldItalic.ttf */,
+				D0D2477E5ABD4B388C762B69 /* OpenSans-ExtraBold.ttf */,
+				AAFC549B10BB4B18848ADBA6 /* OpenSans-ExtraBoldItalic.ttf */,
+				96E0407894CF410B9EF0E562 /* OpenSans-Italic.ttf */,
+				C7D587BFAC1849E2A1992F86 /* OpenSans-Light.ttf */,
+				C851B151940B4667960EEB5F /* OpenSans-LightItalic.ttf */,
+				5E68AD50E6014B73BBD1F4E8 /* OpenSans-Regular.ttf */,
+				D5CB3B8D33444E52B8F07765 /* OpenSans-SemiBold.ttf */,
+				435F9A891AD746798EDC3004 /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -689,7 +766,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -754,6 +831,10 @@
 				{
 					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = BFBF9D7F20442379000AC6B3 /* Products */;
+					ProjectRef = BFBF9D7E20442379000AC6B3 /* RCTPushNotification.xcodeproj */;
 				},
 				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
@@ -1046,6 +1127,20 @@
 			remoteRef = BF4DCADC2037A6ED00698BC7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		BFBF9D9020442379000AC6B3 /* libRCTPushNotification.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTPushNotification.a;
+			remoteRef = BFBF9D8F20442379000AC6B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFBF9D9220442379000AC6B3 /* libRCTPushNotification-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTPushNotification-tvOS.a";
+			remoteRef = BFBF9D9120442379000AC6B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1062,6 +1157,20 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				1B988A3626BE4A5C910072A4 /* Arimo-Bold.ttf in Resources */,
+				E269EEE3B3EC454F94920821 /* Arimo-BoldItalic.ttf in Resources */,
+				55FD11CEA9BA4F158D1A85A1 /* Arimo-Italic.ttf in Resources */,
+				5892F6D649F54027BA4B5A70 /* Arimo-Regular.ttf in Resources */,
+				4BE90142CD7546D499327EE8 /* OpenSans-Bold.ttf in Resources */,
+				E5A0C64570D94FAEA4C74588 /* OpenSans-BoldItalic.ttf in Resources */,
+				ACE540B2B5B04026AB5758F7 /* OpenSans-ExtraBold.ttf in Resources */,
+				1B07535FB07A452C92F1ABF8 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				BC4CEC32C989432AAEE8F0DC /* OpenSans-Italic.ttf in Resources */,
+				F66DD19B0D104D68B5BA0D25 /* OpenSans-Light.ttf in Resources */,
+				F1B23CD595B3422FA54E0D87 /* OpenSans-LightItalic.ttf in Resources */,
+				3F94B8B08E294670A59DC9FD /* OpenSans-Regular.ttf in Resources */,
+				C6003027613D46B5A0DC8E80 /* OpenSans-SemiBold.ttf in Resources */,
+				E20B4520AC124998A5A4A635 /* OpenSans-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1221,7 +1330,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = NF2B2947KN;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native/Libraries/PushNotificationIOS/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/node_modules/react-native/Libraries/**";
 				INFOPLIST_FILE = reddplantene/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1230,6 +1339,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = reddplantene;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1241,7 +1351,7 @@
 				CODE_SIGN_ENTITLEMENTS = reddplantene/reddplantene.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NF2B2947KN;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native/Libraries/PushNotificationIOS/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/node_modules/react-native/Libraries/**";
 				INFOPLIST_FILE = reddplantene/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1250,6 +1360,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = reddplantene;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

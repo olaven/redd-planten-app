@@ -9,7 +9,7 @@ import {
   RefreshControl
 } from "react-native";
 //my own package
-import TimeFormats from "../TimeFormats.js";
+import TimeFormats from "../util/TimeFormats.js";
 
 export default class HistoryView extends Component {
   displayDataPoints(datapoints) {
@@ -40,6 +40,7 @@ export default class HistoryView extends Component {
     return <View style={this.props.inheritedStyles}>
         <Text style={styles.header}>HISTORY</Text>
         <ScrollView
+          style={styles.scrollView}
           refreshControl={
             <RefreshControl
               refreshing={this.props.refreshing}
@@ -54,14 +55,25 @@ export default class HistoryView extends Component {
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    borderStyle: "solid",
+    padding: 20,
+    backgroundColor: "teal"
+  },
   header: {
     alignSelf: "center",
-    marginTop: 10,
-    marginBottom: 30
+    marginTop: 5,
+    fontSize: 45,
+    backgroundColor: "teal",
+    padding: 10,
+    paddingTop: 0,
+    marginBottom: 10
   },
   datapoints: {
     alignSelf: "center",
     color: "khaki",
+    backgroundColor: "teal",
+    padding: 10, 
     margin: 5,
     fontSize: 20
   }
